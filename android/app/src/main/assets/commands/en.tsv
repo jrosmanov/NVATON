@@ -1,0 +1,125 @@
+# Köməkçi fast commands, English. Understood on the phone, without the AI server.
+# One command per line:   category | INTENT | pattern
+#   {contact}  a person (family list, then the phone's contacts)    {text}      free text
+#   {time}     a clock time: 7, 7:30, 7 pm, half past seven, noon   {duration}  10 minutes, an hour
+#   {app}      an app name: whatsapp, youtube, gallery, maps...     {service}   ambulance, police, fire, emergency
+#   (a/b) one of the words is required     [a/b] optional
+# "tomorrow" and "every day" may be said anywhere in an alarm command. Lines are tried top to bottom.
+
+safety | EMERGENCY | call [an/the] {service}
+safety | EMERGENCY | (i need/get me/send) [an/the] {service}
+safety | HELP_ME | help
+safety | HELP_ME | help me
+safety | HELP_ME | i need help
+safety | HELP_ME | i (fell/fell down/have fallen/am hurt)
+
+calls | VIDEO_CALL | video call {contact}
+calls | VIDEO_CALL | (make/start) a video call (to/with) {contact}
+calls | CALL | (call/phone/ring/dial) {contact}
+calls | CALL | give {contact} a (call/ring)
+calls | CALL | make a call to {contact}
+calls | CALL | (talk/speak) (to/with) {contact}
+
+messages | READ_MESSAGES | read [me] my [new/latest] messages
+messages | READ_MESSAGES | (do i have/are there/any) [new] messages
+messages | READ_MESSAGES | who (texted/messaged/wrote to/called) me
+messages | READ_MESSAGES | check my messages
+messages | OPEN_CHAT | (open/show me) [my] (chat/conversation/messages) with {contact}
+messages | VOICE_MESSAGE | (send/record) [a] voice (message/note) (to/for) {contact}
+messages | VOICE_MESSAGE | send {contact} a voice (message/note)
+messages | VOICE_MESSAGE | voice (message/note) (to/for) {contact}
+messages | MESSAGE | (text/message) {contact} (that/saying) {text}
+messages | MESSAGE | send [a] (message/text/whatsapp) to {contact} (saying/that) {text}
+messages | MESSAGE | tell {contact} (that/to) {text}
+messages | MESSAGE | write to {contact} (that/saying) {text}
+messages | MESSAGE_ASK | (text/message) {contact}
+messages | MESSAGE_ASK | send [a] (message/text/whatsapp) to {contact}
+messages | MESSAGE_ASK | write to {contact}
+messages | MESSAGE | (text/message) {contact} {text}
+
+time and phone | TIME | what time is it [now]
+time and phone | TIME | what is the time [now]
+time and phone | TIME | tell me the time
+time and phone | TIME | (time/the time) [please]
+time and phone | DATE | what is (the date/todays date) [today]
+time and phone | DATE | what (day/date) is (it/today) [today]
+time and phone | DATE | what is today
+time and phone | DATE | which day is (it/today)
+time and phone | BATTERY | how much battery [do i have/is left/left]
+time and phone | BATTERY | (what is/check) my battery [level]
+time and phone | BATTERY | battery [level/status]
+time and phone | BATTERY | is (my phone/the phone/it) charging
+time and phone | INTERNET | am i (online/connected) [to the internet]
+time and phone | INTERNET | (is/check) [the] (internet/wifi) [working/on/connected]
+
+sound and light | VOLUME_UP | (volume/sound) up
+sound and light | VOLUME_UP | (turn/make) [it/the volume/the sound] louder
+sound and light | VOLUME_UP | turn up the (volume/sound)
+sound and light | VOLUME_UP | i (cannot/can not) hear [you]
+sound and light | VOLUME_UP | (speak/talk) louder
+sound and light | VOLUME_DOWN | (volume/sound) down
+sound and light | VOLUME_DOWN | (turn/make) [it/the volume/the sound] quieter
+sound and light | VOLUME_DOWN | turn down the (volume/sound)
+sound and light | VOLUME_DOWN | (it is too loud/too loud)
+sound and light | VOLUME_MAX | (maximum/full/max) volume
+sound and light | MUTE | (mute/silence) [the] (phone/sound/ringer)
+sound and light | MUTE | (silent/vibrate) mode
+sound and light | MUTE | turn off the sound
+sound and light | SOUND_ON | (unmute/sound on) [the phone]
+sound and light | SOUND_ON | turn on the sound
+sound and light | FLASHLIGHT_ON | (turn/switch) on [the] (flashlight/torch/light)
+sound and light | FLASHLIGHT_ON | (flashlight/torch) on
+sound and light | FLASHLIGHT_ON | i need [some] light
+sound and light | FLASHLIGHT_OFF | (turn/switch) off [the] (flashlight/torch/light)
+sound and light | FLASHLIGHT_OFF | (flashlight/torch) off
+sound and light | BRIGHTNESS | (brightness/screen) (up/down/brighter/darker)
+sound and light | BRIGHTNESS | make the screen (brighter/darker)
+sound and light | WIFI | (open/show/turn on/turn off/connect to) [the] wifi [settings]
+sound and light | BLUETOOTH | (open/show/turn on/turn off) [the] bluetooth [settings]
+
+apps | OPEN_CAMERA | open the camera
+apps | OPEN_CAMERA | (magnifier/magnifying glass)
+apps | OPEN_APP | (open/start/launch/show me) [the/my] {app} [app]
+apps | OPEN_APP | go to [the/my] {app}
+
+alarms | MEDICINE_REMIND | remind me to take my (medicine/pills/tablets/medication) at {time}
+alarms | REMIND_AT | remind me to {text} at {time}
+alarms | REMIND_AT | remind me at {time} to {text}
+alarms | REMIND_IN | remind me to {text} in {duration}
+alarms | REMIND_IN | remind me in {duration} to {text}
+alarms | ALARM_IN | (set/make) [an/the] alarm (for/in) {duration}
+alarms | ALARM_IN | wake me [up] in {duration}
+alarms | ALARM_AT | (set/make) [an/the] alarm (for/at) {time}
+alarms | ALARM_AT | wake me [up] at {time}
+alarms | ALARM_AT | alarm (for/at) {time}
+alarms | TIMER | (set/start) a timer for {duration}
+alarms | TIMER | timer [for] {duration}
+alarms | LIST_ALARMS | (what/which) alarms (do i have/are set/have i got)
+alarms | LIST_ALARMS | (show/list/read) [me] my alarms
+alarms | CANCEL_ALARMS | (delete/cancel/remove/clear/turn off) (all my alarms/all alarms/my alarms/the alarms)
+
+health | MEDICINE_TAKEN | i (took/have taken/had/just took) my (medicine/pills/tablets/medication)
+health | MEDICINE_TAKEN | (medicine/pills/tablets) taken
+health | MEDICINE_CHECK | did i take my (medicine/pills/tablets/medication) [today]
+health | MEDICINE_CHECK | (when did i take/have i taken) my (medicine/pills/tablets/medication) [today]
+
+reading | READ_SCREEN | read [the/my] screen
+reading | READ_SCREEN | what is on [the/my] screen
+reading | READ_SCREEN | read this (page/message) [to me/for me]
+reading | CAMERA | what is this
+reading | CAMERA | read this [to me/for me]
+reading | CAMERA | what does (it/this) say
+reading | CAMERA | what (medicine/pill/tablet) is this
+
+assistant | REPEAT | (repeat/repeat that/say it again/say that again/again/what did you say/pardon/sorry)
+assistant | STOP | (stop/be quiet/quiet/enough/shut up/stop talking)
+assistant | SLOWER | (speak/talk) (slower/more slowly)
+assistant | SLOWER | (slow down/too fast/you speak too fast)
+assistant | FASTER | (speak/talk) faster
+assistant | THANKS | (thank you/thanks/thanks a lot/thank you very much)
+assistant | HELLO | (hello/hi/good morning/good afternoon/good evening)
+assistant | HOW_ARE_YOU | how are you [today]
+assistant | NAME | (what is your name/who are you)
+assistant | HELP | (what can you do/how do i use you/what do you do)
+assistant | LANGUAGE_AZ | (switch/change) [the language] to azerbaijani
+assistant | LANGUAGE_AZ | speak azerbaijani

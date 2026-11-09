@@ -1,0 +1,6 @@
+<resources>
+    <!-- Shown by Android itself (accessibility and notification-access lists) when the phone's system language is English. -->
+    <string name="a11y_service_label">Köməkçi: WhatsApp sending and screen reading</string>
+    <string name="a11y_description">With this permission Köməkçi does two things: it presses WhatsApp\'s Send button for a message you confirmed by voice, and it reads the screen aloud when you say «Ali, read the screen». The screen is taken only when you call its name, password fields are never read, and nothing is stored.</string>
+    <string name="listener_label">Köməkçi: reading incoming messages</string>
+</resources>

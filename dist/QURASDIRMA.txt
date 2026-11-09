@@ -1,0 +1,49 @@
+Köməkçi ("Əli") 0.1.0: telefona quraşdırma
+==============================================
+
+Android 8 və daha yeni telefonlar üçündür. Tətbiq noutbukdakı backend serverlə işləyir
+(README.md → "1. Backend-i işə salmaq").
+
+1. APK-nı quraşdırın
+   - Komekci-0.1.0.apk faylını telefona köçürün (USB, Telegram, Google Drive) və açın.
+     Telefon "naməlum mənbələrdən quraşdırma" icazəsi istəsə, icazə verin.
+   - Ya da telefon USB ilə qoşuludursa:  adb install -r Komekci-0.1.0.apk
+   - Köhnə versiya varsa, yenisi onun üstünə quraşdırılır (eyni açarla imzalanıb).
+
+2. Telefonu serverə qoşun
+   - USB ilə (ən asanı):  adb reverse tcp:8787 tcp:8787
+     Bu əmri telefonu hər dəfə yenidən qoşanda təkrarlayın.
+   - Wi-Fi ilə: backend/.env faylında HOST=0.0.0.0 və APP_TOKEN=<gizli-söz> yazın, serveri
+     yenidən başladın. Tətbiqdə ⚙️ → Server bölməsinə http://<noutbukun-IP>:8787 ünvanını və
+     həmin tokeni yazıb "Yadda saxla və yoxla" düyməsini basın.
+
+3. ⚙️ → Quraşdırma bölməsində hər ❌ sətrin yanındakı "Aç" düyməsini basın
+   - Mikrofon, kamera, zəng, bildirişlər: icazə verin.
+   - Gələn mesajları oxumaq: "Bildirişlərə giriş" bölməsində Köməkçini aktiv edin.
+     Köhnə versiyadan yeniləyibsinizsə, bu icazəni bir dəfə yenidən verin.
+   - WhatsApp-da avtomatik «Göndər»: Əlçatımlılıq bölməsində Köməkçini aktiv edin.
+   - Açar bozdursa (APK ilə quraşdırılan tətbiqlərdə Android 13+ belə edir):
+     Parametrlər → Tətbiqlər → Köməkçi → sağ yuxarıda ⋮ → "Məhdud parametrlərə icazə ver".
+
+4. Ailə kontaktları: demo nömrələr saxtadır. ⚙️ bölməsində onları silib real nömrələri yazın.
+
+5. Dil: ⚙️ → «🌐 Dil / Language» → English seçsəniz, ekran yazıları, Əlinin səsi, əmrlər və
+   süni intellektin cavabları ingiliscə olur. Ad yenə «Əli» (ingiliscə «Ali») kimi çağırılır.
+
+6. İstifadə
+   - "Əli" deyin, "Bəli?" cavabından sonra əmri deyin. Ya da birbaşa: "Əli, nəvəmə yaz: salam".
+   - Mesaj göndərilməzdən əvvəl ekranda böyük görünür. Söz səhv eşidilibsə, «Dəyiş» düyməsi ilə
+     əl ilə düzəldin, ya da səslə deyin: "yox, axşam gələcəm yaz", "gəlirəm yox, gələcəm",
+     "sonuna sağ ol əlavə et", "Aysuya göndər". "Hə" demədən heç nə göndərilmir.
+   - "Əli, Əzizə səsli mesaj göndər": Əzizin söhbəti açılır və səs yazılmağa başlayır (mikrofonu saxlamaq
+     lazım deyil). Danışın, sonra WhatsApp-ın yaşıl düyməsini basın. Bunun üçün əlçatımlılıq açıq olmalıdır.
+     Yeni versiyanı quraşdırandan sonra yazı özü başlamırsa, əlçatımlılıqda Köməkçini söndürüb yenidən yandırın.
+   - İstənilən tətbiqdə "Əli, ekranı oxu" deyin: ekrandakı mətni oxuyub izah edir.
+   - "Əli, mesajlarımı oxu": son gələn mesajlar. Yeni mesajlar gələn kimi də səsli oxunur.
+   - "Əli, sabah səhər 7-də oyat", "hər gün axşam 9-da dərmanımı xatırlat", "zəngli saatlarım hansılardır".
+     Xiaomi-də zəngli saat üçün: Tətbiqlər → Köməkçi → Avtomatik başlama: açıq.
+   - "Əli, dili ingilis dilinə dəyiş": dili səslə dəyişir.
+   - "Bu dərman nə üçündür?" deyəndə kamera açılır, özü şəkil çəkir və cavab verir.
+     Sonra davam sualları verə bilərsiniz: "Bəs gündə neçə dəfə içim?"
+   - Yuxarıdakı bildiriş və yaşıl mikrofon nöqtəsi normaldır: tətbiq adınızı gözləyir.
+     Ad telefonun içində tanınır. Səs serverə yalnız "Əli" deyiləndən sonra gedir.

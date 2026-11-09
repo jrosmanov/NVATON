@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Köməkçi</string>
+    <string name="a11y_service_label">Köməkçi: WhatsApp-da göndərmə və ekranı oxumaq</string>
+    <string name="a11y_description">Köməkçi bu icazə ilə iki iş görür: səslə təsdiq etdiyiniz WhatsApp mesajı üçün «Göndər» düyməsini basır və siz «Əli, ekranı oxu» deyəndə ekrandakı mətni oxuyur. Ekran yalnız adını çağıranda götürülür, şifrə sahələri oxunmur, heç nə yadda saxlanmır.</string>
+    <string name="listener_label">Köməkçi: gələn mesajları oxumaq</string>
+</resources>

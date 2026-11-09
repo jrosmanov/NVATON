@@ -1,0 +1,10 @@
+.gradle/
+.kotlin/
+build/
+local.properties
+.idea/
+*.iml
+captures/
+.DS_Store
+# Downloaded by scripts/get-wake-model.sh (Vosk Turkish model, ~56 MB)
+app/src/main/assets/wake-model/
